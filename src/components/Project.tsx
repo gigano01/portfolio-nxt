@@ -35,6 +35,13 @@ export default function Project({
 
         function projectsDivSlant(ref: any, faceRight: boolean) {
             const topBound = ref.getBoundingClientRect().top - getViewHeight();
+
+			// Temporarily set clip-path to none
+			// This avoids a dumb chrome bug where the clip-path is somehow not applied sometimes
+			// on the first div. This is a workaround, but it works.
+			ref.style.clipPath = `none`;
+			ref.style.webkitClipPath = `none`;
+
             if (topBound < 0 && !isFirst) {
                 const slant = MathIsFun.clamp(
                     MathIsFun.lerp(
@@ -48,8 +55,8 @@ export default function Project({
                 const dirSwitch1 = faceRight ? "0" : "100%";
                 const dirSwitch2 = faceRight ? "100%" : "0";
 
-                ref.style.clipPath = `polygon(${dirSwitch2} 0, ${dirSwitch1} ${slant}px, ${dirSwitch1} 100%, ${dirSwitch2} 100%) !important`;
-                ref.style.webkitClipPath = `polygon(${dirSwitch2} 0, ${dirSwitch1} ${slant}px, ${dirSwitch1} 100%, ${dirSwitch2} 100%) !important`;
+                ref.style.clipPath = `polygon(${dirSwitch2} 0, ${dirSwitch1} ${slant}px, ${dirSwitch1} 100%, ${dirSwitch2} 100%)`;
+                ref.style.webkitClipPath = `polygon(${dirSwitch2} 0, ${dirSwitch1} ${slant}px, ${dirSwitch1} 100%, ${dirSwitch2} 100%)`;
             }
 
             animationFrameId.current = requestAnimationFrame(() =>

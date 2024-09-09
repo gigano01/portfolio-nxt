@@ -78,8 +78,6 @@
 
 
 #projectPirasAvontuur {
-    clip-path: polygon(100% 0, 0 10dvw, 0 100%, 100% 100%);
-    -webkit-clip-path: polygon(100% 0, 0 10dvw, 0 100%, 100% 100%);
     background-color: var(--noahColorSecondary);
 
     margin-top: -180px;
