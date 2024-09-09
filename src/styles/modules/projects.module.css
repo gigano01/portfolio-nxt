@@ -1,8 +1,8 @@
 /*SECTION: PROJECTS*/
 
 .projects {
-    clip-path: polygon(100% 0, 0 10dvw, 0 100%, 100% 100%);
-    -webkit-clip-path: polygon(100% 0, 0 10dvw, 0 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0 10dvw, 0 100%, 100% 100%) !important;
+    -webkit-clip-path: polygon(100% 0, 0 10dvw, 0 100%, 100% 100%) !important;
     background-color: var(--noahColor);
 
     margin-top: 100px;

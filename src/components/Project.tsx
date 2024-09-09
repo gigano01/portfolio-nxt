@@ -36,6 +36,7 @@ export default function Project({
         function projectsDivSlant(ref: any, faceRight: boolean) {
             const topBound = ref.getBoundingClientRect().top - getViewHeight();
             if (topBound < 0 && !isFirst) {
+				if (isFirst) {console.log("first")}
                 const slant = MathIsFun.clamp(
                     MathIsFun.lerp(
                         0,
@@ -48,11 +49,9 @@ export default function Project({
                 const dirSwitch1 = faceRight ? "0" : "100%";
                 const dirSwitch2 = faceRight ? "100%" : "0";
 
-                ref.style.clipPath = `polygon(${dirSwitch2} 0, ${dirSwitch1} ${slant}px, ${dirSwitch1} 100%, ${dirSwitch2} 100%)`;
-                ref.style.webkitClipPath = `polygon(${dirSwitch2} 0, ${dirSwitch1} ${slant}px, ${dirSwitch1} 100%, ${dirSwitch2} 100%)`;
+                ref.style.clipPath = `polygon(${dirSwitch2} 0, ${dirSwitch1} ${slant}px, ${dirSwitch1} 100%, ${dirSwitch2} 100%) !important`;
+                ref.style.webkitClipPath = `polygon(${dirSwitch2} 0, ${dirSwitch1} ${slant}px, ${dirSwitch1} 100%, ${dirSwitch2} 100%) !important`;
             }
-
-            console.log("projectsDivSlant");
 
             animationFrameId.current = requestAnimationFrame(() =>
                 projectsDivSlant(ref, faceRight)
