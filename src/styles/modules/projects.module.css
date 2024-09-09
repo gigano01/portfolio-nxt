@@ -1,0 +1,107 @@
+/*SECTION: PROJECTS*/
+
+.projects {
+    clip-path: polygon(100% 0, 0 10dvw, 0 100%, 100% 100%);
+    -webkit-clip-path: polygon(100% 0, 0 10dvw, 0 100%, 100% 100%);
+    background-color: var(--noahColor);
+
+    margin-top: 100px;
+
+    overflow-x: clip;
+}
+
+.projectsTitle {
+    font-size: 7.6875rem;
+    font-weight: 900;
+    color: #ffffff;
+    text-wrap: nowrap;
+
+    text-align: center;
+}
+
+.projectsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    flex-direction: row;
+    width: 100%;
+    flex-direction: column;
+
+    margin-top: 200px;
+    /* margin: var(--leftMargin); */
+}
+
+.projectsProject {
+    padding: var(--spacing);
+    max-height: 50dvh;
+    /* background-color: var(--noahColor); */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 20fr;
+    grid-column-gap: 40px;
+    grid-row-gap: 0px;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+.projectsName {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    margin-top: 60px;
+
+    grid-area: 1 / 2 / 2 / 3; /*RIGHT TOP*/
+}
+
+.projectsSynopsis {
+    margin-right: 20px;
+    grid-area: 2 / 2 / 3 / 3; /*RIGHT BOTTOM*/
+    color: #e2e2e2;
+
+    font-size: 1.25rem;
+}
+
+.projectsImage {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    filter: grayscale(0.2) sepia(0.1);
+    align-self: center;
+    justify-self: center;
+
+    grid-area: 1 / 1 / 3 / 2; /*LEFT SIDE*/
+}
+
+
+
+
+#projectPirasAvontuur {
+    clip-path: polygon(100% 0, 0 10dvw, 0 100%, 100% 100%);
+    -webkit-clip-path: polygon(100% 0, 0 10dvw, 0 100%, 100% 100%);
+    background-color: var(--noahColorSecondary);
+
+    margin-top: -180px;
+    padding-bottom: 480px;
+}
+
+#projectForwardRedesign {
+    background-color: var(--noahColor);
+
+    margin-top: -280px;
+    padding-bottom: 280px;
+}
+
+#projectTerrorRoom {
+    background-color: var(--noahColorSecondary);
+
+    margin-top: -80px;
+    padding-bottom: 280px;
+}
+
+#projectClickyProject {
+    background-color: var(--noahColor);
+
+    margin-top: -190px;
+}

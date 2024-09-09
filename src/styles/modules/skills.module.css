@@ -1,0 +1,34 @@
+/*SECTION: SKILLS*/
+
+.skills {
+    margin: 0 25dvw;
+    display: flex;
+    flex-direction: column;
+
+    gap: 90px;
+}
+
+.skillsSkill {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.skillsSkill p {
+    font-size: 1.4rem;
+    font-weight: 350;
+    color: #ffffff;
+}
+
+.skillsSkill img {
+    width: 250px;
+    height: 250px;
+    filter: grayscale(1) sepia(1) hue-rotate(90deg);
+    object-fit: scale-down;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}

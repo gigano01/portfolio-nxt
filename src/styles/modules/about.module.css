@@ -1,0 +1,124 @@
+/*SECTION: ABOUT*/
+
+.about {
+    clip-path: polygon(0 0, 100% 10dvw, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 10dvw, 100% 100%, 0 100%);
+
+    background-color: var(--noahColor);
+    overflow-x: clip;
+
+    position: relative;
+    margin-top: -5dvh;
+
+    --mask: radial-gradient(
+                52.84px at 50% calc(100% - 73.5px),
+                #000 99%,
+                #0000 101%
+            )
+            calc(50% - 60px) 0/120px 100%,
+        radial-gradient(
+                52.84px at 50% calc(100% + 43.5px),
+                #0000 99%,
+                #000 101%
+            )
+            50% calc(100% - 29.93px) / 120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+.aboutContainer {
+    display: flex;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+.aboutContainer ul {
+    line-height: 50px;
+}
+
+.aboutContainer li {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #ffffff;
+
+    text-align: justify;
+}
+
+.aboutContainer p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #ffffff;
+
+    text-align: justify;
+    margin-top: 70px;
+}
+
+.aboutText {
+    margin: 80px;
+    font-weight: 350;
+}
+
+.aboutTitle {
+    font-size: 7.6875rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-wrap: nowrap;
+
+    text-align: center;
+}
+
+.aboutImage {
+    margin-top: 50px;
+    margin-left: var(--spacing);
+    border-radius: 40px;
+
+    filter: grayscale(0.2) sepia(0.1);
+}
+
+.aboutImageContainer {
+    position: relative; /* Make this a relative container */
+}
+
+.aboutSparkle {
+    position: absolute;
+
+    width: 300px;
+    z-index: 1000;
+}
+
+#sparkleOne {
+    top: -13%;
+    left: calc(var(--spacing) - 10%);
+}
+
+#sparkleTwo {
+    top: 80%;
+    left: calc(var(--spacing) + 58%);
+    width: 220px;
+}
+
+.fancyWavyThing {
+    width: calc(100% + 15px);
+    height: 80px;
+
+    /*place it at a slight offset to make it more intersting*/
+    margin: -20px 0 0 -15px;
+    --mask: radial-gradient(
+                50.92px at 50% calc(100% + 36.25px),
+                #0000 calc(99% - 9px),
+                #000 calc(101% - 9px) 99%,
+                #0000 101%
+            )
+            calc(50% - 58px) calc(50% - 19px + 0.5px) / 116px 38px repeat-x,
+        radial-gradient(
+                50.92px at 50% -36.25px,
+                #0000 calc(99% - 9px),
+                #000 calc(101% - 9px) 99%,
+                #0000 101%
+            )
+            50% calc(50% + 19px) / 116px 38px repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+
+    background-color: var(--noahColor);
+}
