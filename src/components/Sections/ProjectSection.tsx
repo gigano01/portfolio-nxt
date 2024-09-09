@@ -23,16 +23,16 @@ export default function ProjectSection() {
                     imgAlt="pira's avontuur poster"
 					faceRight={true}
 					isFirst={true}
-					otherContent={<iframe width="560" height="315" src="https://www.youtube.com/embed/yXaNyBzWDRc?si=1Jk4AbMJbk6BiZt9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>}
+					otherContent={<iframe width="560" height="315" src="https://www.youtube.com/embed/yXaNyBzWDRc?si=1Jk4AbMJbk6BiZt9" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" ></iframe>}
                 >
-                    Pira's avontuur is een location based game dat zich afspeelt in Antwerpen.
-                    Bij dit project was ik de lead programmer en UX Designer in een groep van 4
+                    Piras avontuur is een location based game dat zich afspeelt in Antwerpen.
+                    Bij dit project was ik de lead programmer en UX Designer in een groep van 4G
                     studenten. Het is een spel gemaakt als opdracht van de Hogeschool voor het MOS
                     met een geupdate versie van hun mascote Pira de muis.
                     <br />
                     <br />
                     Ik heb hierbij geleerd hoe elke onderdeel van een project als team aan te
-                    pakken, maar ook hoe een onderdeel van zo'n project te leiden.
+                    pakken, maar ook hoe een onderdeel van zon project te leiden.
                 </Project>
 
                 <Project
