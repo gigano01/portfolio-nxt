@@ -36,7 +36,6 @@ export default function Project({
         function projectsDivSlant(ref: any, faceRight: boolean) {
             const topBound = ref.getBoundingClientRect().top - getViewHeight();
             if (topBound < 0 && !isFirst) {
-				if (isFirst) {console.log("first")}
                 const slant = MathIsFun.clamp(
                     MathIsFun.lerp(
                         0,
