@@ -36,12 +36,6 @@ export default function Project({
         function projectsDivSlant(ref: any, faceRight: boolean) {
             const topBound = ref.getBoundingClientRect().top - getViewHeight();
 
-			// Temporarily set clip-path to none
-			// This avoids a dumb chrome bug where the clip-path is somehow not applied sometimes
-			// on the first div. This is a workaround, but it works.
-			ref.style.clipPath = `none`;
-			ref.style.webkitClipPath = `none`;
-
             if (topBound < 0 && !isFirst) {
                 const slant = MathIsFun.clamp(
                     MathIsFun.lerp(
@@ -75,7 +69,7 @@ export default function Project({
                 cancelAnimationFrame(animationFrameId.current);
             }
         };
-    }, [faceRight, ref, animationFrameId]);
+    }, [faceRight, ref, animationFrameId, isFirst]);
 
     return (
         <div className={styles.projectsProject} id={id} ref={ref}>
