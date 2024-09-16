@@ -25,6 +25,7 @@ export default function Project({
     const animationFrameId = useRef(0);
 
     useEffect(() => {
+		if(isFirst) {return}
         function getViewHeight() {
             return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
         }
