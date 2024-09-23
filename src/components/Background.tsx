@@ -10,6 +10,7 @@ function Background({}) {
     const size = useWindowSize();
 
     useEffect(() => {
+
         const canvas = canvasRef.current;
         const canvasMask = canvasMaskRef.current;
         let timer = 0;
@@ -22,7 +23,6 @@ function Background({}) {
 
 		const updateTouch = (event: any) => {
 			endTimer = timer + 0.7;
-			console.log("h")
 		};
 
         window.addEventListener("mousemove", updateMousePosition);

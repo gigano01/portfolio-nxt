@@ -21,18 +21,28 @@ export default function ProjectSection() {
                     title="Pira's Avontuur"
                     imgLink="portfolio/project_pira.png"
                     imgAlt="pira's avontuur poster"
-					faceRight={true}
-					isFirst={true}
-					otherContent={<iframe width="560" height="315" src="https://www.youtube.com/embed/yXaNyBzWDRc?si=1Jk4AbMJbk6BiZt9" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" ></iframe>}
+                    faceRight={true}
+                    isFirst={true}
+                    otherContent={
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/yXaNyBzWDRc?si=1Jk4AbMJbk6BiZt9"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                        ></iframe>
+                    }
                 >
-                    Piras avontuur is een location based game dat zich afspeelt in Antwerpen.
-                    Bij dit project was ik de lead programmer en UX Designer in een groep van 4G
+                    Piras avontuur is een location based game dat zich afspeelt in Antwerpen. Bij
+                    dit project was ik de lead programmer en UX Designer in een groep van 4G
                     studenten. Het is een spel gemaakt als opdracht van de Hogeschool voor het MOS
                     met een geupdate versie van hun mascote Pira de muis.
                     <br />
                     <br />
                     Ik heb hierbij geleerd hoe elke onderdeel van een project als team aan te
-                    pakken, maar ook hoe een onderdeel van zon project te leiden.
+                    pakken, maar ook hoe een onderdeel van zon project te leiden. Hierbij heb ik
+                    veel bijgeleerd over javascript en wat wel en niet te doen.
                 </Project>
 
                 <Project
@@ -40,7 +50,7 @@ export default function ProjectSection() {
                     title="Forward Coaching Redesign Voorstel"
                     imgLink="portfolio/project_forward.png"
                     imgAlt="Forward nieuwe hoofdpagina"
-					faceRight={false}
+                    faceRight={false}
                 >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod nisl
                     arcu, eget efficitur nibh iaculis vitae. Vivamus ut sapien sed libero iaculis
@@ -62,7 +72,7 @@ export default function ProjectSection() {
                     title="The Terror Room"
                     imgLink="portfolio/project_forward.png"
                     imgAlt="TEMPORARY"
-					faceRight={true}
+                    faceRight={true}
                 >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod nisl
                     arcu, eget efficitur nibh iaculis vitae. Vivamus ut sapien sed libero iaculis
@@ -84,7 +94,7 @@ export default function ProjectSection() {
                     title="Clicky Project"
                     imgLink="portfolio/project_forward.png"
                     imgAlt=""
-					faceRight={false}
+                    faceRight={false}
                 >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod nisl
                     arcu, eget efficitur nibh iaculis vitae. Vivamus ut sapien sed libero iaculis
