@@ -18,7 +18,7 @@ export default function HeaderSection() {
                 <br />
                 Interaction Designer
             </h2>
-            {/* <Background /> */}
+            <Background />
         </main>
     );
 }
