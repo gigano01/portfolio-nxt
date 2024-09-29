@@ -10,29 +10,37 @@ function Background({}) {
     const size = useWindowSize();
 
     useEffect(() => {
-
-        const canvas = canvasRef.current;
-        const canvasMask = canvasMaskRef.current;
+        const canvas = canvasRef.current || document.createElement("canvas");
+        const canvasMask = canvasMaskRef.current || document.createElement("canvas");
         let timer = 0;
         let endTimer = 0; // Example endTimer value
         let animationFrameId: number;
 
-        const updateMousePosition = (event: any) => {
+        const updateMousePosition = (event: MouseEvent) => {
             mousePosition.current = { x: event.clientX, y: event.clientY };
         };
 
-		const updateTouch = (event: any) => {
-			endTimer = timer + 0.7;
-		};
+		const updateTouchPosition = (event: TouchEvent) => {
+			mousePosition.current = { x: event.touches[0].clientX, y: event.touches[0].clientY };
+		}
 
-        window.addEventListener("mousemove", updateMousePosition);
-		window.addEventListener("touchmove", updateMousePosition);
-		window.addEventListener('click', updateTouch);
+        const updateTouch = (event: any) => {
+            endTimer = timer + 0.7;
+        };
+		canvas.width = size.largeWidth;
+        canvas.height = size.largeHeight + 800;
 		
 
+        window.addEventListener("mousemove", updateMousePosition);
+        window.addEventListener("touchmove", updateTouchPosition, { passive: true });
+        window.addEventListener("click", updateTouch);
+
         const draw = () => {
-            if (!canvas || !canvasMask) return;
-			timer += 0.02;
+            if (!canvas || !canvasMask) {
+                console.log("no bitches");
+                return;
+            }
+            timer += 0.02;
             drawBackground(
                 canvas,
                 canvasMask,
@@ -47,13 +55,19 @@ function Background({}) {
         };
 
         draw();
+		// const ctx = canvas.getContext("2d");
+		// if(ctx){
+		// 	ctx.clearRect(0, 0, canvas.width, canvas.height);
+		// 	ctx.fillStyle = "#454545";
+		// 	ctx.fillRect(timer/20, 0, canvas.width-900, canvas.height-900);
+		// }
 
         return () => {
             window.cancelAnimationFrame(animationFrameId);
 
             window.removeEventListener("mousemove", updateMousePosition);
-			window.removeEventListener("touchmove", updateMousePosition);
-			window.removeEventListener('click', updateTouch);
+            window.removeEventListener("touchmove", updateTouchPosition);
+            window.removeEventListener("click", updateTouch);
         };
     }, [size]);
 
@@ -67,8 +81,10 @@ function Background({}) {
         size: any
     ) => {
         const ctx = canvas.getContext("2d");
-        canvas.width = size.width + 800;
-        canvas.height = size.height + 800;
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+
+        // console.log(ctx);
 
         const scrollOffset = -getScrollTop() / 20;
 
@@ -93,7 +109,13 @@ function Background({}) {
             return 1.0 - ((x * (x * x * 15731 + 789221) + 1376312589) & 0x7fffffff) / 1073741824.0;
         }
 
-        function genCircle(centerX: number, centerY: number, maxRadius: number, anglemodifier = 0.03) {
+        function genCircle(
+			ctx: any,
+            centerX: number,
+            centerY: number,
+            maxRadius: number,
+            anglemodifier = 0.03
+        ) {
             for (let radius = 0; radius <= maxRadius; radius += 15) {
                 // Loop over different radii
                 for (let angle = 0; angle < Math.PI * 2; angle += anglemodifier) {
@@ -148,8 +170,8 @@ function Background({}) {
             }
         }
 
-        genCircle(0, 0, 1800);
-        genCircle(canvas.width, canvas.height, 1800);
+        genCircle(ctx, 0, 0, 1800);
+        genCircle(ctx, canvas.width, canvas.height, 1800);
 
         //copy main canvas to blur canvas
         canvasMask.width = canvas.width;
@@ -169,6 +191,8 @@ function Background({}) {
 
             ctxMask.fill();
         }
+
+        //  console.log(canvas)
     };
 
     return (
