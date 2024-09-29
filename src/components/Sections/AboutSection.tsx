@@ -1,12 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "@/styles/modules/about.module.css";
 import SlantedText from "../SlantedText";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.compat.css";
 
 export default function AboutSection() {
     return (
         <>
             <section className={styles.about}>
-                <SlantedText className={[styles.aboutTitle, "josefin"].join(" ")} yOffset={-70} xOffset={800} angle={6}>
+                <SlantedText
+                    className={[styles.aboutTitle, "josefin"].join(" ")}
+                    yOffset={-70}
+                    xOffset={800}
+                    angle={6}
+                >
                     Wie ben ik? Wie ben ik? Wie ben ik? Wie ben ik? Wie ben ik? Wie ben ik?
                 </SlantedText>
                 <div className={styles.aboutContainer}>
@@ -16,26 +23,25 @@ export default function AboutSection() {
                             alt="Noah Van Leemput"
                             className={styles.aboutImage}
                         />
-                        <img
-                            src="sparkle.png"
-                            alt="sparkle"
-                            className={styles.aboutSparkle}
-                            id={styles.sparkleOne}
-                            data-aos="zoom-in"
-                            data-aos-offset="-100"
-                            data-aos-easing="ease-out-back"
-                            data-aos-delay="300"
-                        />
-                        <img
-                            src="sparkle.png"
-                            alt="sparkle"
-                            className={styles.aboutSparkle}
-                            id={styles.sparkleTwo}
-                            data-aos="zoom-in"
-                            data-aos-offset="20"
-                            data-aos-easing="ease-out-back"
-                            data-aos-delay="300"
-                        />
+                        <ScrollAnimation
+                            animateIn="bounceIn"
+                            duration={1}
+							offset={300}
+                            animateOnce={true}
+                            className={[styles.aboutSparkle, styles.sparkleOne].join(" ")}
+                            // id={styles.sparkleOne}
+                        >
+                            <img src="sparkle.png" alt="sparkle" />
+                        </ScrollAnimation>
+                        <ScrollAnimation
+                            animateIn="bounceIn"
+                            duration={1.5}
+                            animateOnce={true}
+                            className={[styles.aboutSparkle, styles.sparkleTwo].join(" ")}
+                            // id={styles.sparkleTwo}
+                        >
+                            <img src="sparkle.png" alt="sparkle" />
+                        </ScrollAnimation>
                     </div>
                     <div className={[styles.aboutText, "josefin"].join(" ")}>
                         <ul>

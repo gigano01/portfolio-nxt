@@ -81,20 +81,25 @@
 
 .aboutSparkle {
     position: absolute;
-
-    width: 300px;
     z-index: 1000;
 }
 
-#sparkleOne {
+.aboutSparkle img {
+	width:300px;
+}
+
+.sparkleOne {
     top: -13%;
     left: calc(var(--spacing) - 10%);
 }
 
-#sparkleTwo {
+.sparkleTwo {
     top: 80%;
     left: calc(var(--spacing) + 58%);
-    width: 220px;
+}
+
+.sparkleTwo img {
+	width: 220px;
 }
 
 .fancyWavyThing {

@@ -19,6 +19,9 @@ const SlantedText = ({
 }) => {
     const ref = useRef<HTMLHeadingElement | null>(null);
     const w = useWindowSize().width;
+	const h2Style = {
+		willChange: "transform"
+	}
 
     useEffect(() => {
         const updatePosition = () => {
@@ -41,7 +44,7 @@ const SlantedText = ({
     }, [yOffset, xOffset, angle, yCorrection, w]); // Dependencies for re-running the effect
 
     return (
-        <h2 className={className} ref={ref}>
+        <h2 className={className} ref={ref} style={h2Style}>
             {children}
         </h2>
     );
