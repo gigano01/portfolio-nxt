@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import styles from "@/styles/modules/projects.module.css";
 import * as MathIsFun from "@/data/mathIsFun";
+import React from "react";
 
 export default function Project({
     id,
@@ -11,6 +12,7 @@ export default function Project({
     faceRight,
     isFirst = false,
     otherContent = null,
+    ongoing = false,
 }: {
     id: string;
     title: string;
@@ -20,12 +22,15 @@ export default function Project({
     faceRight: boolean;
     isFirst?: boolean;
     otherContent?: React.ReactNode;
+    ongoing?: boolean;
 }) {
     const ref = useRef(null);
     const animationFrameId = useRef(0);
 
     useEffect(() => {
-		if(isFirst) {return}
+        if (isFirst) {
+            return;
+        }
         function getViewHeight() {
             return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
         }
@@ -73,15 +78,19 @@ export default function Project({
     }, [faceRight, ref, animationFrameId, isFirst]);
 
     return (
-        <div className={styles.projectsProject} id={id} ref={ref}>
-            {otherContent ? (
-                <div className={styles.projectsImage}>{otherContent}</div> // Replace <div>{otherContent}</div> with the actual JSX for other content
-            ) : (
-                <img src={imgLink} alt={imgAlt} className={styles.projectsImage} />
-            )}
+        <>
+            <div className={styles.projectsProject} id={id} ref={ref}>
+                {otherContent ? (
+                    <div className={styles.projectsImage}>{otherContent}</div> // Replace <div>{otherContent}</div> with the actual JSX for other content
+                ) : (
+                    <img src={imgLink} alt={imgAlt} className={styles.projectsImage} />
+                )}
 
-            <p className={[styles.projectsSynopsis, "josefin"].join(" ")}>{children}</p>
-            <h3 className={[styles.projectsName, "josefin"].join(" ")}>{title}</h3>
-        </div>
+                <div className={[styles.projectsSynopsis, "josefin"].join(" ")}>{children}</div>
+                <h3 className={[styles.projectsName, "josefin"].join(" ")}>
+                    {title} {ongoing && <span className={styles.ongoingFlag}>Work In Progress</span>}
+                </h3>
+            </div>
+        </>
     );
 }
