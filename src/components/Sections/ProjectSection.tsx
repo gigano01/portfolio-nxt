@@ -1,8 +1,16 @@
 import styles from "@/styles/modules/projects.module.css";
 import Project from "@/components/Project";
 import SlantedText from "../SlantedText";
+import { saveAs } from "file-saver";
+import ButtonRow from "../ButtonRow";
+import Button from "../Button";
 
 export default function ProjectSection() {
+    function downloadFile(source: string, name: string) {
+        console.log("Downloading file: ", source);
+        saveAs(source, name);
+    }
+
     return (
         <section className={styles.projects}>
             <SlantedText
@@ -23,16 +31,16 @@ export default function ProjectSection() {
                     imgAlt="pira's avontuur poster"
                     faceRight={true}
                     isFirst={true}
-                    otherContent={
-                        <iframe
-                            width="560"
-                            height="315"
-                            src="https://www.youtube.com/embed/yXaNyBzWDRc?si=1Jk4AbMJbk6BiZt9"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerPolicy="strict-origin-when-cross-origin"
-                        ></iframe>
-                    }
+                    // otherContent={
+                    //     <iframe
+                    //         width="560"
+                    //         height="315"
+                    //         src="https://www.youtube.com/embed/yXaNyBzWDRc?si=1Jk4AbMJbk6BiZt9"
+                    //         title="YouTube video player"
+                    //         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    //         referrerPolicy="strict-origin-when-cross-origin"
+                    //     ></iframe>
+                    // }
                 >
                     Piras avontuur is een location based game dat zich afspeelt in Antwerpen. Bij
                     dit project was ik de lead programmer en UX Designer in een groep van 4G
@@ -41,8 +49,41 @@ export default function ProjectSection() {
                     <br />
                     <br />
                     Ik heb hierbij geleerd hoe elke onderdeel van een project als team aan te
-                    pakken, maar ook hoe een onderdeel van zon project te leiden. Hierbij heb ik
+                    pakken, maar ook hoe een onderdeel van zo&lsquo;n project te leiden. Hierbij heb ik
                     veel bijgeleerd over javascript en wat wel en niet te doen.
+					<br />
+					<br />
+					Er zal altijd een plekje in mijn hart zijn voor Pira&lsquo;s Avontuur en het team er achter.
+                    <ButtonRow className={styles.projectButtons}>
+                        <Button
+                            onClick={() =>
+                                downloadFile(
+                                    "https://www.dropbox.com/scl/fi/t7nrutxhwbb63rrzxcl5i/Desk_Research_Groep.pdf?rlkey=1w5k4e3q6ryol50uuozzt97d6&st=qz9d5fs9&dl=1",
+                                    "Piras_Avontuur_Desk_Research.zip"
+                                )
+                            }
+                            label="Download Desk Research"
+                        />
+                        <Button
+                            onClick={() =>
+                                downloadFile(
+                                    "https://www.dropbox.com/scl/fi/w91gatxg7zaafs58aw7ql/Field_Research_Groep.pdf?rlkey=l4ak2y9sx9fs1269eanha6g2l&st=f03dinpf&dl=1",
+                                    "Piras_Avontuur_Field_Research.zip"
+                                )
+                            }
+                            label="Download Field Research"
+                        />
+                        <Button
+                            style={{ backgroundColor: "#ed4242" }}
+                            onClick={() =>
+                                window.open(
+                                    "https://youtu.be/yXaNyBzWDRc?si=qcXf4y0VJst1SGG_",
+                                    "_blank"
+                                )
+                            }
+                            label="Bekijk De Trailer"
+                        />
+                    </ButtonRow>
                 </Project>
 
                 <Project
