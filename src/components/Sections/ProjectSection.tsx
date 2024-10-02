@@ -116,6 +116,14 @@ export default function ProjectSection() {
                             label="Bekijk De Trailer"
                         />
                     </ButtonRow>
+                    <Button
+                        className={styles.projectButtons}
+                        style={{ width: "100%" }}
+                        onClick={() =>
+                            window.open("https://github.com/gigano01/location_based_game", "_blank")
+                        }
+                        label="Bekijk Code"
+                    />
                 </Project>
 
                 <Project
@@ -144,23 +152,56 @@ export default function ProjectSection() {
                 <Project
                     id={styles.projectTerrorRoom}
                     title="The Terror Room"
-                    imgLink="portfolio/project_forward.png"
+                    imgLink="portfolio/project_terror.png"
                     imgAlt="TEMPORARY"
                     faceRight={true}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod nisl
-                    arcu, eget efficitur nibh iaculis vitae. Vivamus ut sapien sed libero iaculis
-                    imperdiet a et mi. Sed efficitur elit ut mattis aliquam. Duis erat dui,
-                    malesuada nec neque sed, vestibulum finibus lacus. In lacinia arcu eu tristique
-                    fermentum. Curabitur vulputate elit at tellus pharetra, sed volutpat lacus
-                    tristique. Curabitur lacinia suscipit leo, sed convallis turpis tincidunt ac.
-                    Mauris tristique ut risus vulputate blandit. Aenean sed luctus nisi. Nullam
-                    ullamcorper tincidunt velit a tempus. Morbi in facilisis enim. Praesent
-                    pharetra, nunc quis pellentesque pretium, justo eros facilisis odio, et
-                    ullamcorper lacus elit eu ligula. Donec convallis lectus a nisi gravida, nec
-                    accumsan ante sagittis. Mauris at ultrices magna. Ut elementum justo eu magna
-                    ullamcorper, ut fermentum nulla scelerisque. Praesent non tempor elit, sit amet
-                    tincidunt lectus.
+                    <p>
+                        De Terrror room is een Interactieve installatie over overstimulatie in
+                        mensen met ADHD, ASS and HSP. We laten mensen voelen wat personen met deze
+                        stoornissen dagelijks moeten meemaken. Hoe? wel je moet een geheugen
+                        spelletje spelen waar je concentratie bij nodig hebt, en ondertussen flitsen
+                        er lichten rond je, zijn er geluid afleidingen, en als je een fout maakt
+                        word er tegen je gebruld.
+                        <br />
+                        <br />
+                        Ik en mijn teamgenoot Sammia, hebben hier allebij last van en hierdoor was
+                        dit een speciaal passieprojectje van ons. Dit was mijn eerste ervaring met
+                        Raspberry Pi&lsquo;s, Networking, Philips Hue Lampen, en coderen verspreid over
+                        meerdere apperaten. Ik moest dus enorm snel leren om bij te houden, maar ik
+                        heb mezelf gepusht en geprobeerd tot het lukte.
+                        <br />
+                        <br />
+                        Ik was leider over alle backend code, UX, en interactie design. Sammia over
+                        het ontwerp en de frontend.
+                        <br />
+                        <br />
+                        <u>
+                            PS: de readme van de github is MEGA uitgebreid, als u het hele process
+                            en de werking wilt lezen.
+                        </u>
+                    </p>
+                    <ButtonRow>
+                        <Button
+                            onClick={() =>
+                                window.open(
+                                    "https://github.com/gigano01/TeamTerror-TerrorRoom",
+                                    "_blank"
+                                )
+                            }
+                            label="Bekijk Code"
+                        />
+                        <Button
+                            style={{ backgroundColor: "#ed4242" }}
+                            onClick={() =>
+                                window.open(
+                                    "https://youtu.be/qSFXNF2axEk?si=O4LAeuDr_24nvhhj",
+                                    "_blank"
+                                )
+                            }
+                            label="Bekijk De Trailer"
+                        />
+                    </ButtonRow>
                 </Project>
 
                 <Project
