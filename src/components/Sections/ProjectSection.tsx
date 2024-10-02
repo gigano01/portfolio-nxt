@@ -153,7 +153,7 @@ export default function ProjectSection() {
                     id={styles.projectTerrorRoom}
                     title="The Terror Room"
                     imgLink="portfolio/project_terror.png"
-                    imgAlt="TEMPORARY"
+                    imgAlt="Iemand die De Terror Room speelt"
                     faceRight={true}
                 >
                     <p>
@@ -167,9 +167,9 @@ export default function ProjectSection() {
                         <br />
                         Ik en mijn teamgenoot Sammia, hebben hier allebij last van en hierdoor was
                         dit een speciaal passieprojectje van ons. Dit was mijn eerste ervaring met
-                        Raspberry Pi&lsquo;s, Networking, Philips Hue Lampen, en coderen verspreid over
-                        meerdere apperaten. Ik moest dus enorm snel leren om bij te houden, maar ik
-                        heb mezelf gepusht en geprobeerd tot het lukte.
+                        Raspberry Pi&lsquo;s, Networking, Philips Hue Lampen, en coderen verspreid
+                        over meerdere apperaten. Ik moest dus enorm snel leren om bij te houden,
+                        maar ik heb mezelf gepusht en geprobeerd tot het lukte.
                         <br />
                         <br />
                         Ik was leider over alle backend code, UX, en interactie design. Sammia over
@@ -207,23 +207,24 @@ export default function ProjectSection() {
                 <Project
                     id={styles.projectClickyProject}
                     title="Clicky Project"
-                    imgLink="portfolio/project_forward.png"
+                    imgLink="portfolio/project_clicky.png"
                     imgAlt=""
                     faceRight={false}
+                    ongoing={true}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod nisl
-                    arcu, eget efficitur nibh iaculis vitae. Vivamus ut sapien sed libero iaculis
-                    imperdiet a et mi. Sed efficitur elit ut mattis aliquam. Duis erat dui,
-                    malesuada nec neque sed, vestibulum finibus lacus. In lacinia arcu eu tristique
-                    fermentum. Curabitur vulputate elit at tellus pharetra, sed volutpat lacus
-                    tristique. Curabitur lacinia suscipit leo, sed convallis turpis tincidunt ac.
-                    Mauris tristique ut risus vulputate blandit. Aenean sed luctus nisi. Nullam
-                    ullamcorper tincidunt velit a tempus. Morbi in facilisis enim. Praesent
-                    pharetra, nunc quis pellentesque pretium, justo eros facilisis odio, et
-                    ullamcorper lacus elit eu ligula. Donec convallis lectus a nisi gravida, nec
-                    accumsan ante sagittis. Mauris at ultrices magna. Ut elementum justo eu magna
-                    ullamcorper, ut fermentum nulla scelerisque. Praesent non tempor elit, sit amet
-                    tincidunt lectus.
+                    <p>
+                        Ik heb uit pure nieuwschierigheid mijn scherm gedurende 5 maanden getracked.
+                        Ik wou weten welke delen van mijn scherm het meeste gebruikt worden, en of er delen zijn die nooit aangeraakt worden.
+						<br />
+						<br />
+						Deze data zoek ik dan om te zetten in een series van vizualisaties, die ik dan op een showcase website kan laten zien. Hierbij leer ik over data visualisatie, en data verzameling.
+						<br />
+						<br />
+						Wat ik momenteel interessant vind is dat je overduidelijk bepaalde apps kan terugzien, zoals Discord, google, YT Music, etc.
+						<br />
+						<br />
+						PS: dit zijn 193200 Clicks.
+                    </p>
                 </Project>
             </div>
         </section>

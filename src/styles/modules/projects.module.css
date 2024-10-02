@@ -55,6 +55,14 @@
 
     grid-area: 1 / 2 / 2 / 3; /*RIGHT TOP*/
 }
+.ongoingFlag {
+	font-size: 0.4em;
+	background-color: #11955e;
+	padding: 10px;
+	border-radius: 30px;
+	text-align: center;
+	vertical-align: middle;
+}
 
 .projectsSynopsis {
     margin-right: 20px;
