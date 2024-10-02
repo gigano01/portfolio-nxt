@@ -7,7 +7,6 @@ import Button from "../Button";
 
 export default function ProjectSection() {
     function downloadFile(source: string, name: string) {
-        console.log("Downloading file: ", source);
         saveAs(source, name);
     }
 
