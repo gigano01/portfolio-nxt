@@ -3,6 +3,7 @@ import styles from "@/styles/modules/about.module.css";
 import SlantedText from "../SlantedText";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.compat.css";
+import React from "react";
 
 export default function AboutSection() {
     return (

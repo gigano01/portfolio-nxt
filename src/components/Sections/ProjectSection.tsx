@@ -30,9 +30,8 @@ export default function ProjectSection() {
 
     return (
         <section className={styles.projects}>
-
-			{/* PART OF SECOND PROJECT, NEEDED FOR FULL SCREEN IMAGE */}
-			{/* TODO: REFACTOR THIS, THIS IS KINDA BAD */}
+            {/* PART OF SECOND PROJECT, NEEDED FOR FULL SCREEN IMAGE */}
+            {/* TODO: REFACTOR THIS, THIS IS KINDA BAD */}
             {isFullscreen && (
                 <div className={styles.fullscreenImageContainer} onClick={handleCloseFullscreen}>
                     <img
@@ -127,21 +126,19 @@ export default function ProjectSection() {
                     faceRight={false}
                 >
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod nisl
-                        arcu, eget efficitur nibh iaculis vitae. Vivamus ut sapien sed libero
-                        iaculis imperdiet a et mi. Sed efficitur elit ut mattis aliquam. Duis erat
-                        dui, malesuada nec neque sed, vestibulum finibus lacus. In lacinia arcu eu
-                        tristique fermentum. Curabitur vulputate elit at tellus pharetra, sed
-                        volutpat lacus tristique. Curabitur lacinia suscipit leo, sed convallis
-                        turpis tincidunt ac. Mauris tristique ut risus vulputate blandit. Aenean sed
-                        luctus nisi. Nullam ullamcorper tincidunt velit a tempus. Morbi in facilisis
-                        enim. Praesent pharetra, nunc quis pellentesque pretium, justo eros
-                        facilisis odio, et ullamcorper lacus elit eu ligula. Donec convallis lectus
-                        a nisi gravida, nec accumsan ante sagittis. Mauris at ultrices magna. Ut
-                        elementum justo eu magna ullamcorper, ut fermentum nulla scelerisque.
-                        Praesent non tempor elit, sit amet tincidunt lectus.
+                        We kregen de opdracht van een echt bedrijf om hun website te herontwerpen.
+                        Hierbij kwam de kans om ook daadwerkelijk betaald te kunnen worden voor ons
+                        ontwerp, en ondanks dat we dit niet gewonnen hebben ben ik toch dankbaar
+                        voor alles wat ik er bij geleerd heb.
+                        <br />
+                        <br />
+                        Waaronder ontwerpen en het Design Process&trade; ondergaan in een
+                        groepsdynamiek. Wat ik het leukste vond aan deze opdracht was dat we enorm
+                        vrij waren in de richting dat we uit konden, en dat we ons konden uitleven
+                        en echt iets konden maken waar we trots op zijn.
                     </p>
                     <Button onClick={handleOpenFullscreen} label="Bekijk Design" />
+                    {/* !!FULLSCREEN IMAGE AT TOP OF TREE!! */}
                 </Project>
 
                 <Project
