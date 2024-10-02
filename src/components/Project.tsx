@@ -80,7 +80,7 @@ export default function Project({
                 <img src={imgLink} alt={imgAlt} className={styles.projectsImage} />
             )}
 
-            <p className={[styles.projectsSynopsis, "josefin"].join(" ")}>{children}</p>
+            <div className={[styles.projectsSynopsis, "josefin"].join(" ")}>{children}</div>
             <h3 className={[styles.projectsName, "josefin"].join(" ")}>{title}</h3>
         </div>
     );

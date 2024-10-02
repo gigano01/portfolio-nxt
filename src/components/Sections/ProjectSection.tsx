@@ -4,14 +4,45 @@ import SlantedText from "../SlantedText";
 import { saveAs } from "file-saver";
 import ButtonRow from "../ButtonRow";
 import Button from "../Button";
+import { useEffect, useState } from "react";
 
 export default function ProjectSection() {
+    const [isFullscreen, setIsFullscreen] = useState(false);
+
+    const handleOpenFullscreen = () => {
+        setIsFullscreen(true);
+    };
+
+    const handleCloseFullscreen = () => {
+        setIsFullscreen(false);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleCloseFullscreen);
+        return () => {
+            window.removeEventListener("scroll", handleCloseFullscreen);
+        };
+    }, []);
+
     function downloadFile(source: string, name: string) {
         saveAs(source, name);
     }
 
     return (
         <section className={styles.projects}>
+
+			{/* PART OF SECOND PROJECT, NEEDED FOR FULL SCREEN IMAGE */}
+			{/* TODO: REFACTOR THIS, THIS IS KINDA BAD */}
+            {isFullscreen && (
+                <div className={styles.fullscreenImageContainer} onClick={handleCloseFullscreen}>
+                    <img
+                        src="portfolio/showcase/Forward_Coaching_finaal.png"
+                        alt="Forward nieuwe hoofdpagina"
+                        className={styles.fullscreenImage}
+                    />
+                </div>
+            )}
+
             <SlantedText
                 className={[styles.projectsTitle, "josefin"].join(" ")}
                 yOffset={-70}
@@ -41,18 +72,21 @@ export default function ProjectSection() {
                     //     ></iframe>
                     // }
                 >
-                    Piras avontuur is een location based game dat zich afspeelt in Antwerpen. Bij
-                    dit project was ik de lead programmer en UX Designer in een groep van 4G
-                    studenten. Het is een spel gemaakt als opdracht van de Hogeschool voor het MOS
-                    met een geupdate versie van hun mascote Pira de muis.
-                    <br />
-                    <br />
-                    Ik heb hierbij geleerd hoe elke onderdeel van een project als team aan te
-                    pakken, maar ook hoe een onderdeel van zo&lsquo;n project te leiden. Hierbij heb ik
-                    veel bijgeleerd over javascript en wat wel en niet te doen.
-					<br />
-					<br />
-					Er zal altijd een plekje in mijn hart zijn voor Pira&lsquo;s Avontuur en het team er achter.
+                    <p>
+                        Piras avontuur is een location based game dat zich afspeelt in Antwerpen.
+                        Bij dit project was ik de lead programmer en UX Designer in een groep van 4G
+                        studenten. Het is een spel gemaakt als opdracht van de Hogeschool voor het
+                        MOS met een geupdate versie van hun mascote Pira de muis.
+                        <br />
+                        <br />
+                        Ik heb hierbij geleerd hoe elke onderdeel van een project als team aan te
+                        pakken, maar ook hoe een onderdeel van zo&lsquo;n project te leiden. Hierbij
+                        heb ik veel bijgeleerd over javascript en wat wel en niet te doen.
+                        <br />
+                        <br />
+                        Er zal altijd een plekje in mijn hart zijn voor Pira&lsquo;s Avontuur en het
+                        team er achter.
+                    </p>
                     <ButtonRow className={styles.projectButtons}>
                         <Button
                             onClick={() =>
@@ -92,19 +126,22 @@ export default function ProjectSection() {
                     imgAlt="Forward nieuwe hoofdpagina"
                     faceRight={false}
                 >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod nisl
-                    arcu, eget efficitur nibh iaculis vitae. Vivamus ut sapien sed libero iaculis
-                    imperdiet a et mi. Sed efficitur elit ut mattis aliquam. Duis erat dui,
-                    malesuada nec neque sed, vestibulum finibus lacus. In lacinia arcu eu tristique
-                    fermentum. Curabitur vulputate elit at tellus pharetra, sed volutpat lacus
-                    tristique. Curabitur lacinia suscipit leo, sed convallis turpis tincidunt ac.
-                    Mauris tristique ut risus vulputate blandit. Aenean sed luctus nisi. Nullam
-                    ullamcorper tincidunt velit a tempus. Morbi in facilisis enim. Praesent
-                    pharetra, nunc quis pellentesque pretium, justo eros facilisis odio, et
-                    ullamcorper lacus elit eu ligula. Donec convallis lectus a nisi gravida, nec
-                    accumsan ante sagittis. Mauris at ultrices magna. Ut elementum justo eu magna
-                    ullamcorper, ut fermentum nulla scelerisque. Praesent non tempor elit, sit amet
-                    tincidunt lectus.
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod nisl
+                        arcu, eget efficitur nibh iaculis vitae. Vivamus ut sapien sed libero
+                        iaculis imperdiet a et mi. Sed efficitur elit ut mattis aliquam. Duis erat
+                        dui, malesuada nec neque sed, vestibulum finibus lacus. In lacinia arcu eu
+                        tristique fermentum. Curabitur vulputate elit at tellus pharetra, sed
+                        volutpat lacus tristique. Curabitur lacinia suscipit leo, sed convallis
+                        turpis tincidunt ac. Mauris tristique ut risus vulputate blandit. Aenean sed
+                        luctus nisi. Nullam ullamcorper tincidunt velit a tempus. Morbi in facilisis
+                        enim. Praesent pharetra, nunc quis pellentesque pretium, justo eros
+                        facilisis odio, et ullamcorper lacus elit eu ligula. Donec convallis lectus
+                        a nisi gravida, nec accumsan ante sagittis. Mauris at ultrices magna. Ut
+                        elementum justo eu magna ullamcorper, ut fermentum nulla scelerisque.
+                        Praesent non tempor elit, sit amet tincidunt lectus.
+                    </p>
+                    <Button onClick={handleOpenFullscreen} label="Bekijk Design" />
                 </Project>
 
                 <Project
