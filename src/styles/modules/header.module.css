@@ -1,6 +1,6 @@
 .header {
     background-color: #121212;
-    height: 100dvh;
+    height: 100lvh;
     z-index: 20;
 }
 
@@ -58,4 +58,44 @@
     /* filter: blur(20px); */
     background-color: #0458471a;
 	overflow:hidden;
+}
+
+@media screen and (max-width: 1100px) {
+	.headerName {
+		font-size: 9.375rem;
+		line-height: 9.2rem;
+	}
+
+	.headerTitle {
+		font-size: 2.125rem;
+		line-height: 2.5rem;
+	}
+	
+}
+
+
+@media screen and (max-width: 768px) {
+	.headerName {
+		font-size: 7.375rem;
+		line-height: 7.2rem;
+	}
+
+	.headerTitle {
+		font-size: 1.625rem;
+		line-height: 2rem;
+	}
+	
+}
+
+@media screen and (max-width: 480px) {
+	.headerName {
+		font-size: 5.375rem;
+		line-height: 5.2rem;
+	}
+
+	.headerTitle {
+		font-size: 1.425rem;
+		line-height: 1.5rem;
+	}
+	
 }
