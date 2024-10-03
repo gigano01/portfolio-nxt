@@ -8,7 +8,7 @@
     overflow-x: clip;
 
     position: relative;
-    margin-top: -5lvh;
+    margin-top: -5dvh;
 
     --mask: radial-gradient(
                 52.84px at 50% calc(100% - 73.5px),
@@ -71,7 +71,6 @@
     margin-top: 50px;
     margin-left: var(--spacing);
     border-radius: 40px;
-	max-height: 60lvh;
 
     filter: grayscale(0.2) sepia(0.1);
 }
@@ -86,10 +85,7 @@
 }
 
 .aboutSparkle img {
-	/* width:300px; */
-	height: 200px;
-	max-height: 60lvh;
-	object-fit: contain;
+	width:300px;
 }
 
 .sparkleOne {
@@ -99,7 +95,7 @@
 
 .sparkleTwo {
     top: 80%;
-    left: calc(var(--spacing) + 56%);
+    left: calc(var(--spacing) + 58%);
 }
 
 .sparkleTwo img {
@@ -131,74 +127,3 @@
 
     background-color: var(--noahColor);
 }
-
-
-@media screen and (max-width: 1200px) {
-	.aboutTitle {
-		font-size: 4.6875rem;
-	}
-	
-
-	
-	.aboutContainer ul {
-		line-height: 40px;
-	}
-	
-	.aboutContainer li {
-		font-size: 1.5rem;
-	}
-
-	.aboutContainer p {
-		font-size: 1.2rem;
-		margin-top: 40px;
-		
-	}
-	
-	.aboutImageContainer {
-		display: flex;
-		justify-content: center;
-		flex: 1;
-	}
-	
-	.aboutImage {
-		margin-top: 20px;
-		width: 80%;
-	}
-	
-	.aboutSparkle img {
-		height: 120px;
-		flex: 1;
-	}
-	
-	.sparkleOne {
-		top: -13%;
-		left: 10%;
-	}
-	.sparkleTwo {
-		top: 78%;
-		left: 74%;
-	}
-
-	.aboutText {
-		flex: 1;
-		margin: 40px;
-	}
-	
-}
-@media screen and (max-width: 900px) {
-		.aboutContainer {
-			flex-direction: column;
-		}
-	
-		.aboutImage {
-			width: 50%;
-			margin-left: 0px;
-		}
-
-		.sparkleTwo {
-			top: 70%;
-			left: 44%;
-		}
-	
-		
-	}

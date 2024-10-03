@@ -4,6 +4,7 @@
 /*GENERAL SETTINGS*/
 body {
     background-color: #121212;
+	overflow-x: hidden;
 }
 
 /*COSTOM SCROLLBAR*/

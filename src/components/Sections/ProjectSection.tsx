@@ -35,7 +35,7 @@ export default function ProjectSection() {
             {isFullscreen && (
                 <div className={styles.fullscreenImageContainer} onClick={handleCloseFullscreen}>
                     <img
-                        src="portfolio/showcase/Forward_Coaching_finaal.png"
+                        src="portfolio/showcase/Forward_Coaching_Finaal.png"
                         alt="Forward nieuwe hoofdpagina"
                         className={styles.fullscreenImage}
                     />
