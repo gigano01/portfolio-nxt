@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from "@/styles/modules/about.module.css";
 import SlantedText from "../SlantedText";
-import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css/animate.compat.css";
+// import ScrollAnimation from "react-animate-on-scroll";
+// import "animate.css/animate.compat.css";
 import React from "react";
 
 export default function AboutSection() {
@@ -24,25 +24,25 @@ export default function AboutSection() {
                             alt="Noah Van Leemput"
                             className={styles.aboutImage}
                         />
-                        <ScrollAnimation
+                        {/* <ScrollAnimation
                             animateIn="bounceIn"
                             duration={1}
 							offset={300}
                             animateOnce={true}
                             className={[styles.aboutSparkle, styles.sparkleOne].join(" ")}
                             // id={styles.sparkleOne}
-                        >
+                        > */}
                             <img src="sparkle.png" alt="sparkle" />
-                        </ScrollAnimation>
+                        {/* </ScrollAnimation>
                         <ScrollAnimation
                             animateIn="bounceIn"
                             duration={1.5}
                             animateOnce={true}
                             className={[styles.aboutSparkle, styles.sparkleTwo].join(" ")}
                             // id={styles.sparkleTwo}
-                        >
+                        > */}
                             <img src="sparkle.png" alt="sparkle" />
-                        </ScrollAnimation>
+                        {/* </ScrollAnimation> */}
                     </div>
                     <div className={[styles.aboutText, "josefin"].join(" ")}>
                         <ul>
