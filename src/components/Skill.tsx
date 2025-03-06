@@ -1,4 +1,4 @@
-import { animate } from "@/common/animate";
+import { animate, unanimate } from "@/common/animate";
 import styles from "@/styles/modules/skills.module.css";
 import { use, useEffect, useRef } from "react";
 // import ScrollAnimation from "react-animate-on-scroll";
@@ -9,13 +9,11 @@ export default function Skill({
     isLeft,
     imageLink,
     imageAlt,
-	observer
 }: {
     children: React.ReactNode;
     isLeft: boolean;
     imageLink: string;
     imageAlt: string;
-	observer: IntersectionObserver;
 }) {
 	const ref = useRef(null);
     const isReversed = isLeft ? styles.reverse : "";
@@ -23,7 +21,11 @@ export default function Skill({
 
 
 	useEffect(() => {
-		animate(observer, ref);
+		const observer = animate(null, ref);
+		return () => {
+			// cleanup
+			unanimate(observer, ref);
+		}
 	}, []);
 
     return (

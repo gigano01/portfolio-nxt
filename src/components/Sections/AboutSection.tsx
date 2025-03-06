@@ -20,7 +20,6 @@ export default function AboutSection() {
 			// cleanup
 			unanimate(observer, sparkleOne);
 			unanimate(observer, sparkleTwo);
-			observer.disconnect();
 		};
     }, []);
 	

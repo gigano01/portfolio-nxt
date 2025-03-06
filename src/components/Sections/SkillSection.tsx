@@ -4,15 +4,6 @@ import { createObserver } from "@/common/animate";
 import { use, useEffect } from "react";
 
 export default function SkillSection() {
-	let animObserver = null;
-	useEffect(() => {
-		animObserver = createObserver();
-		return () => {
-			animObserver.disconnect();
-		};
-	});
-
-
     return (
         <section className={styles.skills}>
             <Skill isLeft={false} imageLink="/skills/icon1.png" imageAlt="Visual Studio Code logo">

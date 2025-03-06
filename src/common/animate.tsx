@@ -15,7 +15,7 @@ export function createObserver() {
 	return observer;
 }
 
-export function animate(observer: IntersectionObserver, ref: any) {
+export function animate(observer: IntersectionObserver | null, ref: any) {
 
 	if (ref.current) {
 		if(!observer) observer = createObserver();
@@ -25,8 +25,8 @@ export function animate(observer: IntersectionObserver, ref: any) {
 	return observer;
 }
 
-export function unanimate(observer: IntersectionObserver, ref: any) {
-	if (ref.current) {
+export function unanimate(observer: IntersectionObserver | null, ref: any) {
+	if (ref.current && observer) {
 		observer.unobserve(ref.current);
 	}
 
