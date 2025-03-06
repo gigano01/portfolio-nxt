@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { getScrollTop } from "get-scroll";
-import useWindowSize from "@/data/useWindowSize";
+import useWindowSize from "@/common/useWindowSize";
 
 const SlantedText = ({
     className,

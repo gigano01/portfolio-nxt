@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import styles from "@/styles/modules/projects.module.css";
-import * as MathIsFun from "@/data/mathIsFun";
+import * as MathIsFun from "@/common/mathIsFun";
 import React from "react";
 
 export default function Project({

@@ -2,10 +2,28 @@
 import styles from "@/styles/modules/about.module.css";
 import SlantedText from "../SlantedText";
 // import ScrollAnimation from "react-animate-on-scroll";
-// import "animate.css/animate.compat.css";
-import React from "react";
+import "animate.css/animate.compat.css";
+import React, { useEffect, useRef } from "react";
+import { animate, unanimate } from "@/common/animate";
+ 
 
 export default function AboutSection() {
+
+	const sparkleOne = useRef(null);
+	const sparkleTwo = useRef(null);
+	
+	useEffect(() => {
+		const observer = animate(null, sparkleOne);
+		animate(observer, sparkleTwo);
+
+		return () => {
+			// cleanup
+			unanimate(observer, sparkleOne);
+			unanimate(observer, sparkleTwo);
+			observer.disconnect();
+		};
+    }, []);
+	
     return (
         <>
             <section className={styles.about}>
@@ -24,25 +42,12 @@ export default function AboutSection() {
                             alt="Noah Van Leemput"
                             className={styles.aboutImage}
                         />
-                        {/* <ScrollAnimation
-                            animateIn="bounceIn"
-                            duration={1}
-							offset={300}
-                            animateOnce={true}
-                            className={[styles.aboutSparkle, styles.sparkleOne].join(" ")}
-                            // id={styles.sparkleOne}
-                        > */}
+						<div className={[styles.aboutSparkle, styles.sparkleOne, "hidden"].join(" ")} id="sparkleOne" ref={sparkleOne}>
                             <img src="sparkle.png" alt="sparkle" />
-                        {/* </ScrollAnimation>
-                        <ScrollAnimation
-                            animateIn="bounceIn"
-                            duration={1.5}
-                            animateOnce={true}
-                            className={[styles.aboutSparkle, styles.sparkleTwo].join(" ")}
-                            // id={styles.sparkleTwo}
-                        > */}
+						</div>
+						<div className={[styles.aboutSparkle, styles.sparkleTwo, "hidden"].join(" ")} id="sparkleTwo" ref={sparkleTwo}>
                             <img src="sparkle.png" alt="sparkle" />
-                        {/* </ScrollAnimation> */}
+						</div>
                     </div>
                     <div className={[styles.aboutText, "josefin"].join(" ")}>
                         <ul>
