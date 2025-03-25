@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef } from "react";
 import { getScrollTop } from "get-scroll";
 import useWindowSize from "@/common/useWindowSize";
