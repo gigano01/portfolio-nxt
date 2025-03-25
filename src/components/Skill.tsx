@@ -21,7 +21,7 @@ export default function Skill({
 
 
 	useEffect(() => {
-		const observer = animate(null, ref);
+		const observer = animate(null, ref, animDirection);
 		return () => {
 			// cleanup
 			unanimate(observer, ref);

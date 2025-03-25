@@ -1,11 +1,11 @@
-export function createObserver() {
+export function createObserver(animationName: string) {
 	const observer = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					console.log(entry);
 					entry.target.classList.remove('hidden');
-					entry.target.classList.add('animated', 'bounceIn');
+					entry.target.classList.add('animated', animationName);
 					observer.unobserve(entry.target);
 				}
 			});
@@ -15,10 +15,10 @@ export function createObserver() {
 	return observer;
 }
 
-export function animate(observer: IntersectionObserver | null, ref: any) {
+export function animate(observer: IntersectionObserver | null, ref: any, animationName: string) {
 
 	if (ref.current) {
-		if(!observer) observer = createObserver();
+		if(!observer) observer = createObserver(animationName);
 		observer.observe(ref.current);
 	}
 

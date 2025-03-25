@@ -13,8 +13,8 @@ export default function AboutSection() {
 	const sparkleTwo = useRef(null);
 	
 	useEffect(() => {
-		const observer = animate(null, sparkleOne);
-		animate(observer, sparkleTwo);
+		const observer = animate(null, sparkleOne, "bounceIn");
+		animate(observer, sparkleTwo, "bounceIn");
 
 		return () => {
 			// cleanup
