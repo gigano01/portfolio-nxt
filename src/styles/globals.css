@@ -36,5 +36,8 @@ body::-webkit-scrollbar-thumb {
     font-style: normal;
 }
 
-
+.hidden {
+	/* display: none; */
+	visibility: hidden;
+}
   

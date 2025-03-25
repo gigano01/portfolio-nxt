@@ -1,3 +1,4 @@
+"use client";
 import styles from "@/styles/modules/projects.module.css";
 import Project from "@/components/Project";
 import SlantedText from "../SlantedText";

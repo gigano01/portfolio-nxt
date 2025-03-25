@@ -1,0 +1,269 @@
+@font-face {
+    font-family: 'Hepta Slab';
+    src: url('fonts/HeptaSlab-Bold.woff2') format('woff2'),
+        url('fonts/HeptaSlab-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hepta Slab';
+    src: url('fonts/HeptaSlab-ExtraBold.woff2') format('woff2'),
+        url('fonts/HeptaSlab-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hepta Slab';
+    src: url('fonts/HeptaSlab-ExtraLight.woff2') format('woff2'),
+        url('fonts/HeptaSlab-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hepta Slab';
+    src: url('fonts/HeptaSlab-Regular.woff2') format('woff2'),
+        url('fonts/HeptaSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hepta Slab';
+    src: url('fonts/HeptaSlab-Thin.woff2') format('woff2'),
+        url('fonts/HeptaSlab-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hepta Slab';
+    src: url('fonts/HeptaSlab-Medium.woff2') format('woff2'),
+        url('fonts/HeptaSlab-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hepta Slab';
+    src: url('fonts/HeptaSlab-Black.woff2') format('woff2'),
+        url('fonts/HeptaSlab-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hepta Slab';
+    src: url('fonts/HeptaSlab-SemiBold.woff2') format('woff2'),
+        url('fonts/HeptaSlab-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hepta Slab';
+    src: url('fonts/HeptaSlab-Light.woff2') format('woff2'),
+        url('fonts/HeptaSlab-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-Medium.woff2') format('woff2'),
+        url('fonts/JosefinSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-MediumItalic.woff2') format('woff2'),
+        url('fonts/JosefinSans-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-Bold.woff2') format('woff2'),
+        url('fonts/JosefinSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-Light.woff2') format('woff2'),
+        url('fonts/JosefinSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-ExtraLight.woff2') format('woff2'),
+        url('fonts/JosefinSans-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-SemiBoldItalic.woff2') format('woff2'),
+        url('fonts/JosefinSans-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-Italic.woff2') format('woff2'),
+        url('fonts/JosefinSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-ThinItalic.woff2') format('woff2'),
+        url('fonts/JosefinSans-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-Regular.woff2') format('woff2'),
+        url('fonts/JosefinSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-Thin.woff2') format('woff2'),
+        url('fonts/JosefinSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-ExtraLightItalic.woff2') format('woff2'),
+        url('fonts/JosefinSans-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-LightItalic.woff2') format('woff2'),
+        url('fonts/JosefinSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-BoldItalic.woff2') format('woff2'),
+        url('fonts/JosefinSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-SemiBold.woff2') format('woff2'),
+        url('fonts/JosefinSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stick No Bills';
+    src: url('fonts/StickNoBills-SemiBold.woff2') format('woff2'),
+        url('fonts/StickNoBills-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stick No Bills';
+    src: url('fonts/StickNoBills-Bold.woff2') format('woff2'),
+        url('fonts/StickNoBills-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stick No Bills';
+    src: url('fonts/StickNoBills-ExtraLight.woff2') format('woff2'),
+        url('fonts/StickNoBills-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stick No Bills';
+    src: url('fonts/StickNoBills-Regular.woff2') format('woff2'),
+        url('fonts/StickNoBills-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stick No Bills';
+    src: url('fonts/StickNoBills-Light.woff2') format('woff2'),
+        url('fonts/StickNoBills-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stick No Bills';
+    src: url('fonts/StickNoBills-Medium.woff2') format('woff2'),
+        url('fonts/StickNoBills-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stick No Bills';
+    src: url('fonts/StickNoBills-ExtraBold.woff2') format('woff2'),
+        url('fonts/StickNoBills-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

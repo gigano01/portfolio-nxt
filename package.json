@@ -13,11 +13,10 @@
     "animate.css": "^4.1.1",
     "file-saver": "^2.0.5",
     "get-scroll": "^2.0.1",
-    "next": "^14.2.13",
+    "next": "^15.2.1",
     "normalize.css": "^8.0.1",
-    "react": "^18",
-    "react-animate-on-scroll": "^2.1.9",
-    "react-dom": "^18"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@types/file-saver": "^2.0.7",

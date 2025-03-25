@@ -1,5 +1,7 @@
 import styles from "@/styles/modules/skills.module.css";
 import Skill from "@/components/Skill";
+import { createObserver } from "@/common/animate";
+import { use, useEffect } from "react";
 
 export default function SkillSection() {
     return (
