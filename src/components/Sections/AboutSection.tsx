@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
 import styles from "@/styles/modules/about.module.css";
 import SlantedText from "../SlantedText";

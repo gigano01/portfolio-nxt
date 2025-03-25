@@ -6,15 +6,15 @@ import ProjectSection from "@/components/Sections/ProjectSection";
 
 
 export default function Home() {
-    return (
-        <>
-            <HeaderSection />
+	return (
+		<>
+			<HeaderSection />
 
-            <AboutSection />
+			<AboutSection />
 
-           <SkillSection />
+		   <SkillSection />
 
-            <ProjectSection />
-        </>
-    );
+			<ProjectSection />
+		</>
+	);
 }

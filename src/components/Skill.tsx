@@ -1,3 +1,4 @@
+"use client";
 import { animate, unanimate } from "@/common/animate";
 import styles from "@/styles/modules/skills.module.css";
 import { use, useEffect, useRef } from "react";
