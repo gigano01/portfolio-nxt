@@ -22,7 +22,7 @@ export default function AboutSection() {
 				<div className={styles.aboutContainer}>
 					<div className={styles.aboutImageContainer}>
 						<img
-							src="me_me_me_pfp.jpg"
+							src="NoahVanLeemput_profielfoto_artistiek_kleurtonenV2.png"
 							alt="Noah Van Leemput"
 							className={styles.aboutImage}
 						/>

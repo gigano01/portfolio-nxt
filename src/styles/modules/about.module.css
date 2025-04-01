@@ -73,7 +73,7 @@
     border-radius: 40px;
 	max-height: 60lvh;
 
-    filter: grayscale(0.2) sepia(0.1);
+    /* filter: grayscale(0.2) sepia(0.1); */
 }
 
 .aboutImageContainer {
