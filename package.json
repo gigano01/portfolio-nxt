@@ -13,7 +13,7 @@
     "animate.css": "^4.1.1",
     "file-saver": "^2.0.5",
     "get-scroll": "^2.0.1",
-    "next": "16.0.8",
+    "next": "16.0.10",
     "normalize.css": "^8.0.1",
     "react": "19.2.1",
     "react-dom": "19.2.1"
